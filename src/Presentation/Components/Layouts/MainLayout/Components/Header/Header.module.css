@@ -35,8 +35,12 @@
           text-decoration: none;
         }
 
+        & div {
+          border-bottom: 1.5px solid transparent;
+        }
+
         & div:hover {
-          border-bottom: 1.5px solid var(--main-text-color);
+          border-color: var(--main-text-color);
         }
       }
     }
