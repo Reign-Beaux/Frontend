@@ -1,0 +1,33 @@
+.footer {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: var(--padding-content);
+  background-color: var(--main-text-color);
+
+  & nav ul {
+    display: flex;
+    gap: 32px;
+    padding: 0;
+    list-style: none;
+
+    & a {
+      font-size: 20px;
+      color: var(--main-background-color);
+      text-decoration: none;
+
+      :link,
+      :visited,
+      :hover,
+      :active,
+      :focus {
+        color: var(--main-background-color);
+        text-decoration: none;
+      }
+
+      & div:hover {
+        border-bottom: 1.5px solid var(--main-text-color);
+      }
+    }
+  }
+}

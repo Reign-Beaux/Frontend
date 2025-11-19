@@ -1,0 +1,10 @@
+.smallPresentation {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: var(--padding-content);
+
+  & .title {
+    font-size: 64px;
+  }
+}

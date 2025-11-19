@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 32px 0;
+  padding: var(--padding-content);
+
+  & .socialNetworks {
+    display: flex;
+    flex: 1;
+    gap: 16px;
+  }
+
+  & .navMenu {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+
+    & ul {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+
+      & a {
+        font-size: 20px;
+        color: inherit;
+        text-decoration: none;
+
+        :link,
+        :visited,
+        :hover,
+        :active,
+        :focus {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        & div:hover {
+          border-bottom: 1.5px solid var(--main-text-color);
+        }
+      }
+    }
+  }
+}
