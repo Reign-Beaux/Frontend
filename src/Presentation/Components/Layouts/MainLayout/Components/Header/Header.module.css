@@ -1,46 +1,51 @@
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 32px 0;
-  padding: var(--padding-content);
+  justify-content: center;
+  width: 100%;
 
-  & .socialNetworks {
+  & .headerContent {
     display: flex;
     flex: 1;
-    gap: 16px;
-  }
+    max-width: var(--max-width-content);
+    margin: 32px 0;
 
-  & .navMenu {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-
-    & ul {
+    & .socialNetworks {
       display: flex;
-      gap: 32px;
-      list-style: none;
+      flex: 1;
+      gap: 16px;
+    }
 
-      & a {
-        font-size: 20px;
-        color: inherit;
-        text-decoration: none;
+    & .navMenu {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
 
-        :link,
-        :visited,
-        :hover,
-        :active,
-        :focus {
+      & ul {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+
+        & a {
+          font-size: 20px;
           color: inherit;
           text-decoration: none;
-        }
 
-        & div {
-          border-bottom: 1.5px solid transparent;
-        }
+          :link,
+          :visited,
+          :hover,
+          :active,
+          :focus {
+            color: inherit;
+            text-decoration: none;
+          }
 
-        & div:hover {
-          border-color: var(--main-text-color);
+          & div {
+            border-bottom: 1.5px solid transparent;
+          }
+
+          & div:hover {
+            border-color: var(--main-text-color);
+          }
         }
       }
     }

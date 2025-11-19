@@ -1,36 +1,38 @@
 .blogPresentation {
   display: flex;
-  padding: var(--padding-content);
+  justify-content: center;
   background-color: var(--green);
 
-  & a {
-    margin: 32px 0;
-  }
-
-  & h2 {
-    margin: 32px 0;
-  }
-
-  & .profilePicture {
+  & .blogPresentationContent {
+    display: flex;
     flex: 1;
+    max-width: var(--max-width-content);
 
-    & img {
-      position: absolute;
-      top: 200px;
-      right: 10%;
-      bottom: 112px;
-      width: auto;
-      max-width: 280px;
-      height: auto;
-      max-height: 500px;
-      border-radius: 500px;
-      object-position: 50% 60%;
+    & a {
+      margin: 32px 0;
     }
-  }
 
-  & .articlesAccess {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+    & h2 {
+      margin: 32px 0;
+    }
+
+    & .profilePicture {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+
+      & img {
+        width: auto;
+        max-height: 500px;
+        border-radius: 500px;
+        transform: translateY(-250px);
+      }
+    }
+
+    & .articlesAccess {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(332px, 1fr));
+    }
   }
 }

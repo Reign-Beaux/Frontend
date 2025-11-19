@@ -1,18 +1,24 @@
 .getInTouch {
   display: flex;
-  padding: var(--padding-content);
+  justify-content: center;
   margin-bottom: 32px;
-  
-  & .visualHook {
-    flex: 1;
-    font-size: 32px;
-  }
 
-  & .contactWithCustomer {
+  & .getInTouchContent {
     display: flex;
-    flex: 2;
-    flex-direction: column;
-    justify-content: center;
-    gap: 32px;
+    flex: 1;
+    max-width: var(--max-width-content);
+
+    & .visualHook {
+      flex: 1;
+      font-size: 32px;
+    }
+
+    & .contactWithCustomer {
+      display: flex;
+      flex: 2;
+      flex-direction: column;
+      justify-content: center;
+      gap: 32px;
+    }
   }
 }
