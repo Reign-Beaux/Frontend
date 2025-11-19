@@ -1,21 +1,14 @@
-.bestPractices {
+.blogPresentation {
   display: flex;
   padding: var(--padding-content);
   background-color: var(--green);
 
-  & .paragraph {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    gap: 16px;
+  & a {
+    margin: 32px 0;
+  }
 
-    > :first-child {
-      margin-top: 32px;
-    }
-
-    > :last-child {
-      margin-bottom: 32px;
-    }
+  & h2 {
+    margin: 32px 0;
   }
 
   & .profilePicture {
@@ -33,5 +26,11 @@
       border-radius: 500px;
       object-position: 50% 60%;
     }
+  }
+
+  & .articlesAccess {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
   }
 }

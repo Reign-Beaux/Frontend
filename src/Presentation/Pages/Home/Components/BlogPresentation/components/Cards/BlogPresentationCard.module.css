@@ -1,0 +1,10 @@
+.blogPresentationCard {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  padding: 16px;
+  border: 1.5px solid var(--main-text-color);
+  border-radius: 16px;
+  background-color: var(--main-background-color);
+}
