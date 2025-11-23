@@ -1,13 +1,15 @@
 import styles from "./BlogPresentationCard.module.css";
 
 interface Props {
-  cardText: string;
+  title: string;
+  smallDescription: string;
 }
 
-export const BlogPresentationCard = ({ cardText }: Props) => {
+export const BlogPresentationCard = ({ title, smallDescription }: Props) => {
   return (
     <div className={styles.blogPresentationCard}>
-      <span>{cardText}</span>
+      <h3>{title}</h3>
+      <p>{smallDescription}</p>
     </div>
   );
 };

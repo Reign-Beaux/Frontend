@@ -1,24 +1,36 @@
 .header {
+  position: fixed;
   display: flex;
   justify-content: center;
   width: 100%;
+  height: 64px;
+  background-color: var(--main-background-color);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 
   & .headerContent {
     display: flex;
     flex: 1;
+    align-items: center;
     max-width: var(--max-width-content);
-    margin: 32px 0;
 
     & .socialNetworks {
       display: flex;
       flex: 1;
+      align-items: center;
       gap: 16px;
+      height: 48px;
+
+      & svg {
+        margin-top: 5px;
+      }
     }
 
     & .navMenu {
       display: flex;
       flex: 1;
       justify-content: flex-end;
+      align-items: center;
+      height: 48px;
 
       & ul {
         display: flex;

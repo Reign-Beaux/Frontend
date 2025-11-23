@@ -4,6 +4,7 @@
   --main-text-color: #332e2e;
   --padding-content: 0 10%;
   --max-width-content: 1464px;
+  --header-height: 64px;
 }
 
 html,
@@ -13,7 +14,14 @@ body {
   background-color: var(--main-background-color);
 }
 
-h1, h2, p, ul {
+h1,
+h2,
+p,
+ul {
   margin: 0;
 }
 
+hr {
+  border: none;
+  border-top: 1.5px solid var(--main-text-color);
+}

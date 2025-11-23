@@ -6,7 +6,17 @@ import { BlogPresentationCard } from "./components";
 
 import styles from "./BlogPresentation.module.css";
 
-const articleFake: string[] = ["Arquitectura Limpia", "Docker", "Principios S.O.L.I.D.", "SQL"];
+interface ArticleFake {
+  title: string;
+  smallDescription: string;
+}
+
+const articleFake: ArticleFake[] = [
+  { title: "Arquitectura Limpia", smallDescription: "" },
+  { title: "Docker", smallDescription: "Introducción enfocada a contenedores" },
+  { title: "Principios S.O.L.I.D.", smallDescription: "" },
+  { title: "SQL", smallDescription: "" },
+];
 
 export const BlogPresentation = () => {
   return (
@@ -16,8 +26,8 @@ export const BlogPresentation = () => {
           <h2>Artículos sobre desarrollo.</h2>
           <div className={styles.articlesAccess}>
             {articleFake.map((article) => (
-              <Fragment key={article}>
-                <BlogPresentationCard cardText={article} />
+              <Fragment key={article.title}>
+                <BlogPresentationCard title={article.title} smallDescription={article.smallDescription} />
               </Fragment>
             ))}
           </div>
