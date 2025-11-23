@@ -1,5 +1,5 @@
 import "@Application/Styles/CustomElementsStyles.css";
-import "@Application/Styles/Rules.css";
+import "@Application/Styles/Rules.scss";
 import { router } from "@Infrastructure/Router/Router.tsx";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";

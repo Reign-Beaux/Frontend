@@ -1,7 +1,7 @@
 import { Routes } from "@Infrastructure/Router/Routes";
 import { Link } from "@Presentation/Components/Elements";
 
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 
 export const Header = () => {
   return (

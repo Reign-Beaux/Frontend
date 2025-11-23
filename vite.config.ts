@@ -19,6 +19,11 @@ export default defineConfig({
     modules: {
       // generateScopedName: "[hash:8]",
     },
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/Application/Styles/_Variables.scss";`,
+      },
+    },
   },
   server: {
     port: 5173,
