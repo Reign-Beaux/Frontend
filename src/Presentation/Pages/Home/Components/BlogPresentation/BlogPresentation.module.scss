@@ -1,12 +1,12 @@
 .blogPresentation {
   display: flex;
   justify-content: center;
-  background-color: var(--green);
+  background-color: variables.$green;
 
   & .blogPresentationContent {
     display: flex;
     flex: 1;
-    max-width: var(--max-width-content);
+    max-width: variables.$max-width-content;
 
     & a {
       margin: 32px 0;

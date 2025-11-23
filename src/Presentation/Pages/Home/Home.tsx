@@ -1,5 +1,5 @@
 import { BlogPresentation, GetInTouch, SmallPresentation } from "./Components";
-import styles from "./Home.module.css";
+import styles from "./Home.module.scss";
 
 const Home = () => {
   return (

@@ -4,7 +4,7 @@ import { Routes } from "@Infrastructure/Router/Routes";
 import { Link } from "@Presentation/Components/Elements";
 import { BlogPresentationCard } from "./components";
 
-import styles from "./BlogPresentation.module.css";
+import styles from "./BlogPresentation.module.scss";
 
 interface ArticleFake {
   title: string;

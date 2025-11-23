@@ -6,7 +6,7 @@
   & .getInTouchContent {
     display: flex;
     flex: 1;
-    max-width: var(--max-width-content);
+    max-width: variables.$max-width-content;
 
     & .visualHook {
       flex: 1;

@@ -1,4 +1,4 @@
-import styles from "./BlogPresentationCard.module.css";
+import styles from "./BlogPresentationCard.module.scss";
 
 interface Props {
   title: string;

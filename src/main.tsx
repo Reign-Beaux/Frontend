@@ -1,4 +1,4 @@
-import "@Application/Styles/CustomElementsStyles.css";
+import "@Application/Styles/CustomElementsStyles.scss";
 import "@Application/Styles/Rules.scss";
 import { router } from "@Infrastructure/Router/Router.tsx";
 import { StrictMode } from "react";

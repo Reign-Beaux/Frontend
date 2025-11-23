@@ -1,6 +1,7 @@
 import { Routes } from "@Infrastructure/Router/Routes";
 import { Link } from "@Presentation/Components/Elements";
-import styles from "./GetInTouch.module.css";
+
+import styles from "./GetInTouch.module.scss";
 
 export const GetInTouch = () => {
   return (

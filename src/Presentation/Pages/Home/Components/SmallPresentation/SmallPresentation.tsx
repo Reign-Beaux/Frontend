@@ -1,6 +1,7 @@
 import { Routes } from "@Infrastructure/Router/Routes";
 import { Link } from "@Presentation/Components/Elements";
-import styles from "./SmallPresentation.module.css";
+
+import styles from "./SmallPresentation.module.scss";
 
 export const SmallPresentation = () => (
   <div className={styles.smallPresentation}>

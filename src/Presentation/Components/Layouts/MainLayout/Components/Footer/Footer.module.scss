@@ -2,13 +2,13 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: var(--main-text-color);
+  background-color: variables.$main-text-color;
 
   & .footerContent {
     display: flex;
     flex: 1;
     align-items: center;
-    max-width: var(--max-width-content);
+    max-width: variables.$max-width-content;
     height: 80px;
 
     & nav ul {
@@ -19,7 +19,7 @@
 
       & a {
         font-size: 20px;
-        color: var(--main-background-color);
+        color: variables.$main-background-color;
         text-decoration: none;
 
         :link,
@@ -27,12 +27,12 @@
         :hover,
         :active,
         :focus {
-          color: var(--main-background-color);
+          color: variables.$main-background-color;
           text-decoration: none;
         }
 
         & div:hover {
-          border-bottom: 1.5px solid var(--main-text-color);
+          border-bottom: 1.5px solid variables.$main-text-color;
         }
       }
     }

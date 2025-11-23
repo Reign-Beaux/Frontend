@@ -6,9 +6,9 @@
   width: 400px;
   height: 110px;
   padding: 16px;
-  border: 1.5px solid var(--main-text-color);
+  border: 1.5px solid variables.$main-text-color;
   border-radius: 16px;
-  background-color: var(--main-background-color);
+  background-color: variables.$main-background-color;
   cursor: pointer;
   transition: transform 0.25s ease;
 }

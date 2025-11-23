@@ -1,6 +1,6 @@
 import { Routes } from "@Infrastructure/Router/Routes";
 import { Link } from "@Presentation/Components/Elements";
-import styles from "./Footer.module.css";
+import styles from "./Footer.module.scss";
 
 export const Footer = () => {
   return (
