@@ -5,3 +5,10 @@ $padding-content: 0 10%;
 $max-width-content: 1464px;
 $header-height: 64px;
 $first-breakpoint: calc($max-width-content + 32px);
+
+// Breakpoints responsivos
+$screen-sm: 640px;   // Móviles grandes
+$screen-md: 768px;   // Tablets
+$screen-lg: 1024px;  // Laptops
+$screen-xl: 1280px;  // Desktops
+$screen-2xl: 1536px; // Pantallas grandes

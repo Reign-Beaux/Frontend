@@ -63,9 +63,17 @@
   }
 }
 
-@media (width <= variables.$first-breakpoint) {
+@media (width <= variables.$screen-2xl) {
   .header {
     padding: 0 16px;
-    width: calc(100% - 32px);
+    width: 100%;
+  }
+}
+
+@media (width <= variables.$screen-sm) {
+  .header {
+    // background-color: black;
+    // width: 344px; Saul
+    // width: 361px; Brenda
   }
 }

@@ -1,5 +1,13 @@
+* {
+  // outline: 1px solid red;
+  box-sizing: border-box;
+}
+
 html,
 body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   margin: 0;
   font-family: Roboto, sans-serif;
   background-color: variables.$main-background-color;
@@ -15,4 +23,10 @@ ul {
 hr {
   border: none;
   border-top: 1.5px solid variables.$main-text-color;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }
