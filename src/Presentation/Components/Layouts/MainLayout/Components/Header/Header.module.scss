@@ -12,10 +12,10 @@
     flex: 1;
     align-items: center;
     max-width: $max-width-content;
+    justify-content: space-between;
 
     .socialNetworks {
       display: flex;
-      flex: 1;
       align-items: center;
       gap: 16px;
       height: 48px;
@@ -27,7 +27,6 @@
 
     .navMenu {
       display: flex;
-      flex: 1;
       justify-content: flex-end;
       align-items: center;
       height: 48px;
@@ -66,6 +65,7 @@
 
 @media (width <= $first-breakpoint) {
   .header {
-    background-color: brown;
+    padding: 0 16px;
+    width: calc(100% - 32px);
   }
 }

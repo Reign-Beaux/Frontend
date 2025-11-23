@@ -26,8 +26,9 @@ export default defineConfig({
     },
   },
   server: {
+    host: true,
     port: 5173,
     strictPort: true,
-    allowedHosts: ["saulantonio.br-y-sa.com", "localhost"],
+    // allowedHosts: ["saulantonio.br-y-sa.com", "localhost"],
   },
 });
