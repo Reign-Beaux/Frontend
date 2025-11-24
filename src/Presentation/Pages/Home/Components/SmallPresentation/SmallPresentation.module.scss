@@ -1,25 +1,39 @@
 .smallPresentation {
   display: flex;
   justify-content: center;
+  margin-top: 16px;
 
-  & .smallPresentationContent {
+  .smallPresentationContent {
     display: flex;
     flex: 1;
     flex-direction: column;
     gap: 32px;
     max-width: variables.$max-width-content;
 
-    & h1,
     p {
-      /* width: 50%; */
-    }
-
-    & p {
       font-size: 24px;
     }
 
-    & .title {
+    .title {
       font-size: 64px;
+    }
+  }
+}
+
+
+@media (width <= variables.$screen-2xl) {
+  .smallPresentation {
+    padding: 0 16px;
+    width: 100%;
+  }
+}
+
+@media (width <= variables.$screen-sm) {
+  .smallPresentation {
+    .smallPresentationContent {
+      h1 {
+        font-size: 36px !important;
+      }
     }
   }
 }
