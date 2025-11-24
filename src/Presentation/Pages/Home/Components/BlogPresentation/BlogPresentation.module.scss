@@ -40,12 +40,6 @@
 @media (width <= variables.$screen-2xl) {
   .blogPresentation {
     padding: 0 16px;
-
-    .blogPresentationContent {
-      .profilePicture {
-        display: none;
-      }
-    }
   }
 }
 

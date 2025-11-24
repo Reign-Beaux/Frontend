@@ -32,6 +32,18 @@
   }
 }
 
+@media (width <= variables.$screen-lg) {
+  .smallPresentation {
+    width: 50%;
+  }
+}
+
+@media (width <= variables.$screen-md) {
+  .smallPresentation {
+    width: 100%;
+  }
+}
+
 @media (width <= variables.$screen-sm) {
   .smallPresentation {
     .smallPresentationContent {
