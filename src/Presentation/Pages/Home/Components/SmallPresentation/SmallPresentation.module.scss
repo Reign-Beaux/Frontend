@@ -24,6 +24,11 @@
 @media (width <= variables.$screen-2xl) {
   .smallPresentation {
     padding: 0 16px;
+    .smallPresentationContent {
+      h1 {
+        font-size: 48px !important;
+      }
+    }
   }
 }
 

@@ -3,25 +3,25 @@
   justify-content: center;
   background-color: variables.$green;
 
-  & .blogPresentationContent {
+  .blogPresentationContent {
     display: flex;
     flex: 1;
     max-width: variables.$max-width-content;
 
-    & a {
+    a {
       margin: 32px 0;
     }
 
-    & h2 {
+    h2 {
       margin: 32px 0;
     }
 
-    & .profilePicture {
+    .profilePicture {
       display: flex;
       flex: 1;
       justify-content: flex-end;
 
-      & img {
+      img {
         width: auto;
         max-height: 500px;
         border-radius: 500px;
@@ -29,10 +29,32 @@
       }
     }
 
-    & .articlesAccess {
+    .articlesAccess {
       display: grid;
       gap: 1rem;
       grid-template-columns: repeat(auto-fit, minmax(332px, 1fr));
+    }
+  }
+}
+
+@media (width <= variables.$screen-2xl) {
+  .blogPresentation {
+    padding: 0 16px;
+
+    .blogPresentationContent {
+      .profilePicture {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (width <= variables.$screen-md) {
+  .blogPresentation {
+    .blogPresentationContent {
+      .profilePicture {
+        display: none;
+      }
     }
   }
 }
