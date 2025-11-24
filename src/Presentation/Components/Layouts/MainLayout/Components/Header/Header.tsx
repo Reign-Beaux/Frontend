@@ -23,7 +23,7 @@ export const Header = () => {
             </svg>
           </a>
           <a
-            href="https://www.linkedin.com/in/saúl-antonio-morquecho-cela/"
+            href="https://www.linkedin.com/in/saul-antonio-morquecho-cela-/"
             target="_blank"
             aria-label="Perfil de LinkedInd"
             rel="noreferrer noopener">

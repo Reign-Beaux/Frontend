@@ -72,8 +72,21 @@
 
 @media (width <= variables.$screen-sm) {
   .header {
-    // background-color: black;
-    // width: 344px; Saul
-    // width: 361px; Brenda
+    .headerContent {
+      .socialNetworks {
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      .navMenu {
+        ul {
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+    }
   }
 }
