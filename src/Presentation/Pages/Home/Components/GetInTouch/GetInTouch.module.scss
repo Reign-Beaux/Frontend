@@ -1,2 +1,39 @@
 .getInTouch {
+  margin-bottom: 80px;
+  padding: 60px;
+  background: linear-gradient(135deg, variables.$card-bg, rgba(108, 92, 231, 0.05));
+  border-radius: variables.$border-radius;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: variables.$shadow-md;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: variables.$gradient-text;
+  }
+}
+
+.contactTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: variables.$gradient-text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.contactDescription {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  color: variables.$text-color;
+  opacity: 0.9;
 }

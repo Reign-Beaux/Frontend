@@ -1,23 +1,16 @@
-import { Routes } from "@Infrastructure/Router/Routes";
-import { Link } from "@Presentation/Components/Elements";
-
 import styles from "./GetInTouch.module.scss";
 
 export const GetInTouch = () => {
   return (
-    <div className={styles.getInTouch}>
-      <div className={styles.getInTouchContent}>
-        <div className={styles.visualHook}>
-          <h2>¿Creamos un proyecto?</h2>
-        </div>
-        <div className={styles.contactWithCustomer}>
-          <p>Si tienes algún proyecto Web no dudes en contactarme.</p>
-
-          <Link route={Routes.AboutMe} className="linkButton">
-            Envíame un correo
-          </Link>
-        </div>
-      </div>
-    </div>
+    <section className={`${styles.getInTouch} fade-in delay-3`}>
+      <h2 className={styles.contactTitle}>¿Listo para trabajar juntos?</h2>
+      <p className={styles.contactDescription}>
+        Estoy disponible para nuevos proyectos y colaboraciones. Si buscas un desarrollador comprometido con
+        la calidad y la innovación, hablemos.
+      </p>
+      <a href="mailto:saul@example.com" className="linkButton linkButton-large">
+        Contáctame
+      </a>
+    </section>
   );
 };
