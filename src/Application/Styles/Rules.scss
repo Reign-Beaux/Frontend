@@ -36,3 +36,9 @@ video {
   max-width: 100%;
   height: auto;
 }
+
+p {
+  color: variables.$text-color;
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
