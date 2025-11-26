@@ -1,10 +1,26 @@
-$main-background-color: #fff7f3;
-$green: #d9ffb6;
-$main-text-color: #332e2e;
+// Colors
+$bg-color: #0f172a;
+$text-color: #f1f5f9;
+$primary-color: #818cf8;
+$secondary-color: #6366f1;
+$accent-color: #38bdf8;
+$card-bg: #1e293b;
+$nav-bg: rgba(15, 23, 42, 0.85);
+
+// Gradients
+$gradient-text: linear-gradient(135deg, #818cf8, #38bdf8);
+
+// Shadows
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+$shadow-md: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+// Border Radius
+$border-radius: 16px;
+
+// Spacing
 $padding-content: 0 10%;
 $max-width-content: 1464px;
 $header-height: 64px;
-$first-breakpoint: calc($max-width-content + 32px);
 
 // Breakpoints responsivos
 $screen-sm: 640px;   // Móviles grandes
