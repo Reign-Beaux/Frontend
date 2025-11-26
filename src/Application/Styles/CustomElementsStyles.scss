@@ -1,3 +1,20 @@
+.linkButton {
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, variables.$primary-color, variables.$secondary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.4);
+  }
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;

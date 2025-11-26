@@ -1,4 +1,6 @@
+import { Routes } from "@Infrastructure/Router/Routes";
 import styles from "./SmallPresentation.module.scss";
+import { Link } from "@Presentation/Components/Elements";
 
 export const SmallPresentation = () => (
   <section className={styles.smallPresentation}>
@@ -10,10 +12,10 @@ export const SmallPresentation = () => (
     <p className="fade-in delay-2">
       Especializado en el ecosistema .NET y tecnologías frontend como React y Astro.
     </p>
-    <div className="fade-in delay-3" style={{marginTop: "2rem"}}>
-      <a href="about.html" className="btn">
+    <div className="fade-in delay-3" style={{ marginTop: "2rem" }}>
+      <Link route={Routes.AboutMe} className="linkButton">
         Conoce más sobre mí
-      </a>
+      </Link>
     </div>
   </section>
 );
