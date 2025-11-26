@@ -1,5 +1,7 @@
+import styles from "./SmallPresentation.module.scss";
+
 export const SmallPresentation = () => (
-  <section className="hero">
+  <section className={styles.smallPresentation}>
     <h1 className="fade-in">Hola, soy Saúl Antonio Morquecho Cela</h1>
     <p className="fade-in delay-1">
       Soy un desarrollador Fullstack apasionado por construir aplicaciones web modernas, escalables y
