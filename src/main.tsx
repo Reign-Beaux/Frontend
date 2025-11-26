@@ -1,5 +1,6 @@
 import "@Application/Styles/CustomElementsStyles.scss";
 import "@Application/Styles/Rules.scss";
+import "@fontsource/roboto";
 import { router } from "@Infrastructure/Router/Router.tsx";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
