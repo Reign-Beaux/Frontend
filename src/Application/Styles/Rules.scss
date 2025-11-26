@@ -13,6 +13,9 @@ body,
   margin: 0;
   font-family: Roboto, sans-serif;
   background-color: variables.$bg-color;
+  color: variables.$text-color;
+  line-height: 1.7;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #root {
@@ -41,4 +44,66 @@ p {
   color: variables.$text-color;
   opacity: 0.9;
   font-size: 1.1rem;
+}
+
+main {
+  padding: 60px 0;
+  min-height: calc(100vh - 160px);
+}
+
+/* Typography & Animations */
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 1.5rem;
+  background: variables.$gradient-text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: variables.$text-color;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: variables.$text-color;
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

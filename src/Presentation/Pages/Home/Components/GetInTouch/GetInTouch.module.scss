@@ -1,24 +1,2 @@
 .getInTouch {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 32px;
-
-  & .getInTouchContent {
-    display: flex;
-    flex: 1;
-    max-width: variables.$max-width-content;
-
-    & .visualHook {
-      flex: 1;
-      font-size: 32px;
-    }
-
-    & .contactWithCustomer {
-      display: flex;
-      flex: 2;
-      flex-direction: column;
-      justify-content: center;
-      gap: 32px;
-    }
-  }
 }

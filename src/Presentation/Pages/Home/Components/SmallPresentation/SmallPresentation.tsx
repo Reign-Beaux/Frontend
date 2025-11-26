@@ -1,16 +1,17 @@
-import { Routes } from "@Infrastructure/Router/Routes";
-import { Link } from "@Presentation/Components/Elements";
-
-import styles from "./SmallPresentation.module.scss";
-
 export const SmallPresentation = () => (
-  <div className={styles.smallPresentation}>
-    <div className={styles.smallPresentationContent}>
-      <h1 className={styles.title}>Saúl Antonio Morquecho Cela</h1>
-      <p>Hola soy Fullstack Developer enfocado en la productividad y la calidad del código.</p>
-      <Link route={Routes.AboutMe} className="linkButton">
-        Sobre Mí
-      </Link>
+  <section className="hero">
+    <h1 className="fade-in">Hola, soy Saúl Antonio Morquecho Cela</h1>
+    <p className="fade-in delay-1">
+      Soy un desarrollador Fullstack apasionado por construir aplicaciones web modernas, escalables y
+      eficientes.
+    </p>
+    <p className="fade-in delay-2">
+      Especializado en el ecosistema .NET y tecnologías frontend como React y Astro.
+    </p>
+    <div className="fade-in delay-3" style={{marginTop: "2rem"}}>
+      <a href="about.html" className="btn">
+        Conoce más sobre mí
+      </a>
     </div>
-  </div>
+  </section>
 );
