@@ -2,8 +2,14 @@ import { Routes } from "@Infrastructure/Router/Routes";
 import { Link } from "@Presentation/Components/Elements";
 
 import styles from "./Header.module.scss";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 export const Header = () => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   return (
     <header className={styles.header} role="banner">
       <div className="container">
@@ -44,13 +50,25 @@ export const Header = () => {
           </ul>
           <ul className={styles.navLinks}>
             <li>
-              <Link route={Routes.Home}>Inicio</Link>
+              <Link
+                route={Routes.Home}
+                className={location.pathname === Routes.Home ? styles.active : undefined}>
+                Inicio
+              </Link>
             </li>
             <li>
-              <Link route={Routes.AboutMe}>Sobre mí</Link>
+              <Link
+                route={Routes.AboutMe}
+                className={location.pathname === Routes.AboutMe ? styles.active : undefined}>
+                Sobre mí
+              </Link>
             </li>
             <li>
-              <Link route={Routes.Blog}>Blog</Link>
+              <Link
+                route={Routes.Blog}
+                className={location.pathname === Routes.Blog ? styles.active : undefined}>
+                Blog
+              </Link>
             </li>
           </ul>
         </nav>

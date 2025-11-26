@@ -52,26 +52,32 @@
     font-weight: 500;
     transition: color 0.2s ease;
     position: relative;
-  }
 
-  a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: variables.$primary-color;
-    transition: width 0.3s ease;
-  }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: variables.$primary-color;
+      transition: width 0.3s ease;
+    }
 
-  a:hover::after,
-  a.active::after {
-    width: 100%;
-  }
+    &:hover {
+      color: variables.$primary-color;
 
-  a:hover,
-  a.active {
-    color: variables.$primary-color;
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &.active {
+      color: variables.$primary-color;
+
+      &::after {
+        width: 100%;
+      }
+    }
   }
 }
