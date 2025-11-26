@@ -1,47 +1,3 @@
-// * {
-//   // outline: 1px solid red;
-//   box-sizing: border-box;
-// }
-
-// html,
-// body,
-// #root {
-//   height: 100%;
-//   width: 100%;
-//   max-width: 100%;
-//   overflow-x: hidden;
-//   margin: 0;
-//   font-family: Roboto, sans-serif;
-//   background-color: variables.$bg-color;
-//   color: variables.$text-color;
-//   line-height: 1.7;
-//   transition: background-color 0.3s ease, color 0.3s ease;
-// }
-
-// #root {
-//   height: auto;
-//   display: flex;
-//   flex-direction: column;
-// }
-
-// html,
-// body {
-//   margin: 0;
-//   font-family: Roboto, sans-serif;
-// }
-
-// #root {
-//   display: flex;
-//   flex-direction: column;
-//   min-height: 100vh;
-//   background-color: variables.$bg-color;
-//   color: variables.$text-color;
-//   transition: background-color 0.3s ease, color 0.3s ease;
-//   overflow-x: hidden;
-//   line-height: 1.7;
-// }
-
-
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -50,6 +6,7 @@ html {
 
 /* Para que todo herede box-sizing */
 *, *::before, *::after {
+  // outline: 1px solid red;
   box-sizing: inherit;
 }
 
