@@ -1,44 +1,59 @@
-import { Fragment } from "react/jsx-runtime";
-
-import { Routes } from "@Infrastructure/Router/Routes";
 import { Link } from "@Presentation/Components/Elements";
-import { BlogPresentationCard } from "./components";
-
 import styles from "./BlogPresentation.module.scss";
+import { Routes } from "@Infrastructure/Router/Routes";
 
 interface ArticleFake {
   title: string;
   smallDescription: string;
+  createdAt: string;
 }
 
 const articleFake: ArticleFake[] = [
-  { title: "Arquitectura Limpia", smallDescription: "" },
-  { title: "Docker", smallDescription: "Introducción enfocada a contenedores" },
-  { title: "Principios S.O.L.I.D.", smallDescription: "" },
-  { title: "SQL", smallDescription: "" },
+  {
+    title: "Novedades en .NET 9",
+    smallDescription: "Un repaso a las características más importantes y mejoras de rendimiento.",
+    createdAt: "25 de Noviembre, 2025",
+  },
+  {
+    title: "Clean Architecture",
+    smallDescription: "Cómo estructurar tus proyectos para que sean escalables y mantenibles.",
+    createdAt: "10 de Noviembre, 2025",
+  },
+  {
+    title: "Astro & React",
+    smallDescription: "Integrando componentes de React en sitios estáticos con Astro.",
+    createdAt: "15 de Octubre, 2025",
+  },
+  {
+    title: "SQL",
+    smallDescription: "Conociendo las bases de datos relacionales y cómo utilizarlas eficientemente.",
+    createdAt: "30 de Septiembre, 2025",
+  },
 ];
 
 export const BlogPresentation = () => {
   return (
-    <div className={styles.blogPresentation}>
-      <div className={styles.blogPresentationContent}>
-        <div style={{ flex: 2 }}>
-          <h2>Artículos sobre desarrollo.</h2>
-          <div className={styles.articlesAccess}>
-            {articleFake.map((article) => (
-              <Fragment key={article.title}>
-                <BlogPresentationCard title={article.title} smallDescription={article.smallDescription} />
-              </Fragment>
-            ))}
-          </div>
-          <Link route={Routes.AboutMe} className="linkButton">
-            Blog
-          </Link>
-        </div>
-        <div className={styles.profilePicture}>
-          <img src="./profile.jpg" alt="profile-picture" />
-        </div>
+    <section className="fade-in delay-3">
+      <h2 className={styles.sectionTitle}>Últimos Artículos</h2>
+      <div className={styles.cardGrid}>
+        {articleFake.map((article, index) => (
+          <article className={styles.blogCard} key={index}>
+            <span className={styles.blogDate}>{article.createdAt}</span>
+            <h3 className={styles.blogTitle}>
+              <a href="posts/novedades-dotnet-9.html">{article.title}</a>
+            </h3>
+            <p>{article.smallDescription}</p>
+            <Link route={Routes.Blog} className={styles.readMore}>
+              Leer más →
+            </Link>
+          </article>
+        ))}
       </div>
-    </div>
+      <div style={{ textAlign: "center", marginTop: "2rem" }}>
+        <a href="blog.html" className={`linkButton ${styles.goToBlog}`}>
+          Ver todos los artículos
+        </a>
+      </div>
+    </section>
   );
 };
