@@ -3,7 +3,8 @@ import { createBrowserRouter } from "react-router-dom";
 import { Routes } from "./Routes";
 
 const Home = lazy(() => import("@Presentation/Pages/Home/Home"));
-const MainLayout = lazy(() => import("@Presentation/Components/Layouts/MainLayout/MainLayout"))
+const MainLayout = lazy(() => import("@Presentation/Components/Layouts/MainLayout/MainLayout"));
+const AboutMe = lazy(() => import("@Presentation/Pages/AboutMe/AboutMe"));
 
 const routes = [
   {
@@ -19,6 +20,14 @@ const routes = [
         element: (
           <Suspense fallback={<div>Cargando...</div>}>
             <Home />
+          </Suspense>
+        ),
+      },
+      {
+        path: Routes.AboutMe,
+        element: (
+          <Suspense fallback={<div>Cargando...</div>}>
+            <AboutMe />
           </Suspense>
         ),
       },
