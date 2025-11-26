@@ -4,13 +4,24 @@
 }
 
 html,
-body {
+body,
+#root {
+  height: 100%;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
   margin: 0;
   font-family: Roboto, sans-serif;
   background-color: variables.$main-background-color;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 h1,
