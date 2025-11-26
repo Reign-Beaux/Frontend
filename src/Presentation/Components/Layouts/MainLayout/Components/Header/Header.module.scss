@@ -1,4 +1,77 @@
 .header {
-  background-color: variables.$bg-color;
+  position: sticky;
+  top: 0;
+  background-color: variables.$nav-bg;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.2rem 0;
+  transition: background-color 0.3s ease;
 }
 
+.headerNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+  background: variables.$gradient-text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.socialNetworks {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  align-items: center;
+
+  svg {
+    fill: variables.$text-color;
+    transition: fill 0.2s ease;
+    cursor: pointer;
+    margin-top: 4px;
+  }
+}
+
+.navLinks {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: variables.$text-color;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    position: relative;
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: variables.$primary-color;
+    transition: width 0.3s ease;
+  }
+
+  a:hover::after,
+  a.active::after {
+    width: 100%;
+  }
+
+  a:hover,
+  a.active {
+    color: variables.$primary-color;
+  }
+}
