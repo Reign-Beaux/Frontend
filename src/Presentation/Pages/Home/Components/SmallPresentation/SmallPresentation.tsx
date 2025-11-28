@@ -4,7 +4,7 @@ import { Link } from "@Presentation/Components/Elements";
 
 export const SmallPresentation = () => (
   <section className={styles.smallPresentation}>
-    <h1 className="fade-in">Hola, soy Saúl Antonio Morquecho Cela</h1>
+    <h1 className="fade-in">Hola, soy Saúl Antonio</h1>
     <p className="fade-in delay-1">
       Soy un desarrollador Fullstack apasionado por construir aplicaciones web modernas, escalables y
       eficientes.
