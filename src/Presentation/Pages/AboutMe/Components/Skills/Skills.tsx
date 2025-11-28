@@ -2,7 +2,7 @@ import styles from "./Stkills.module.scss";
 
 export const Skills = () => {
   return (
-    <div className={`${styles.skills} fade-in delay-2`}>
+    <div className={`${styles.skills} fade-in delay-3`}>
       <div className={styles.grouped}>
         <h2>Habilidades técnicas</h2>
         <div className={styles.skillsGrid}>
