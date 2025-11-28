@@ -8,7 +8,7 @@ export const GetInTouch = () => {
         Estoy disponible para nuevos proyectos y colaboraciones. Si buscas un desarrollador comprometido con
         la calidad y la innovación, hablemos.
       </p>
-      <a href="mailto:saul@example.com" className="linkButton linkButton-large">
+      <a href="mailto:saul.morquecho.cela@gmail.com" className="linkButton linkButton-large">
         Contáctame
       </a>
     </section>
