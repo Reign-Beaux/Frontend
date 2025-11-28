@@ -1,0 +1,36 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  .grouped {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skillTag {
+  background-color: variables.$card-bg;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: variables.$shadow-sm;
+  border: 1px solid variables.$primary-color;
+  color: variables.$text-color;
+  transition: all 0.3s ease;
+  cursor: default;
+
+  &:hover {
+    background-color: variables.$primary-color;
+    color: white;
+    transform: scale(1.05);
+  }
+}

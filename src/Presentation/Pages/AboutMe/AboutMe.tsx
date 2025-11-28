@@ -1,14 +1,14 @@
-import styles from './AboutMe.module.scss';
-import { Photo } from './Components/Photo/Photo';
-import { Presentation } from './Components/Presentation/Presentation';
+import { Presentation, Skills } from "./Components";
+
+import styles from "./AboutMe.module.scss";
 
 const AboutMe = () => {
   return (
     <div className={styles.aboutMeContainer}>
-      <Photo />
       <Presentation />
+      <Skills />
     </div>
   );
-}
+};
 
 export default AboutMe;

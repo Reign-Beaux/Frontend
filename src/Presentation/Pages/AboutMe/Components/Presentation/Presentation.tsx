@@ -2,8 +2,10 @@ import styles from "./Presentation.module.scss";
 
 export const Presentation = () => {
   return (
-    <section className={styles.presentation}>
-      <div></div>
+    <section className={`fade-in ${styles.presentation}`}>
+      <div className={styles.photoContainer}>
+        <img src="./profile.jpg" />
+      </div>
       <div>
         <h1>Sobre Mí</h1>
         <p className="delay-1">
