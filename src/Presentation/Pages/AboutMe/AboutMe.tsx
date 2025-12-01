@@ -1,4 +1,4 @@
-import { Focus, Presentation, Skills } from "./Components";
+import { Focus, Presentation, Skills, WorkExperience } from "./Components";
 
 import styles from "./AboutMe.module.scss";
 
@@ -8,6 +8,7 @@ const AboutMe = () => {
       <Presentation />
       <Focus />
       <Skills />
+      <WorkExperience />
     </div>
   );
 };
