@@ -4,11 +4,11 @@ import styles from "./Accordion.module.scss";
 
 interface Props {
   label: string;
-  content: ReactNode;
+  children: ReactNode;
   className?: string;
 }
 
-export const Accordion = ({ label, content, className }: Props) => {
+export const Accordion = ({ label, children, className }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState<string>("0px");
@@ -26,16 +26,16 @@ export const Accordion = ({ label, content, className }: Props) => {
     } else {
       setHeight("0px");
     }
-  }, [isOpen, content]);
+  }, [isOpen, children]);
 
   return (
-    <div className={currentClassName}>
+    <div className={`${currentClassName} ${isOpen ? styles.active : ""}`}>
       <button className={styles.accordionLabel} onClick={toggleAccordion}>
         {label}
         <span className={styles.accordionIcon}>▼</span>
       </button>
       <div className={styles.accordionContent} style={{ maxHeight: height }} ref={contentRef}>
-        {content}
+        <div className={styles.contentInner}>{children}</div>
       </div>
     </div>
   );

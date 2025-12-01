@@ -12,9 +12,4 @@
   background-color: variables.$card-bg;
   box-shadow: variables.$shadow-sm;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    box-shadow: variables.$shadow-md;
-    transform: translateY(-5px);
-  }
 }

@@ -37,7 +37,7 @@
   transition: transform 0.3s ease;
 }
 
-.accordionItem.active .accordionIcon {
+.accordion.active .accordionIcon {
   transform: rotate(180deg);
 }
 
@@ -48,7 +48,11 @@
   padding: 0 30px;
 }
 
-.accordionItem.active .accordionContent {
+.accordion.active .accordionContent {
   padding-bottom: 30px;
   /* max-height is set via JS */
+}
+
+.contentInner {
+    padding: 0 30px 30px 30px;
 }
