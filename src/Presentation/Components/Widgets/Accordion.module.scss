@@ -1,0 +1,54 @@
+.accordion {
+  background-color: variables.$card-bg;
+  border-radius: variables.$border-radius;
+  box-shadow: variables.$shadow-sm;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: variables.$shadow-md;
+  }
+}
+
+.accordionLabel {
+  width: 100%;
+  padding: 20px 30px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: variables.$text-color;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: variables.$primary-color;
+  }
+}
+
+.accordionIcon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.accordionItem.active .accordionIcon {
+  transform: rotate(180deg);
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 30px;
+}
+
+.accordionItem.active .accordionContent {
+  padding-bottom: 30px;
+  /* max-height is set via JS */
+}
