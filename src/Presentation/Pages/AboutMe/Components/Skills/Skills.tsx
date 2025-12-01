@@ -1,4 +1,4 @@
-import styles from "./Stkills.module.scss";
+import styles from "./Skills.module.scss";
 
 export const Skills = () => {
   return (
