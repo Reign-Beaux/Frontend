@@ -1,3 +1,150 @@
-.workExperience {
-  background: none;
+.workHistoryItem {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; // Espacio entre header y secciones
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+// --- Header del puesto ---
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.workRole {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: variables.$text-color; // Título en blanco para resaltar
+}
+
+.workCompany {
+  font-size: 1rem;
+  font-weight: 600;
+  color: variables.$primary-color; // Color primario para la empresa
+}
+
+.workDate {
+  font-size: 0.85rem;
+  color: variables.$accent-color; // Acento suave para la fecha
+  font-family: monospace; // Opcional: toque técnico a la fecha
+  opacity: 0.9;
+}
+
+// --- Títulos de secciones (Responsabilidades, Logros, Stack) ---
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: rgba(variables.$text-color, 0.5); // Gris suave
+  margin: 0;
+}
+
+// --- Listas de texto (Responsabilidades y Logros) ---
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: rgba(variables.$text-color, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    // Bullet personalizado
+    &::before {
+      content: "▹"; // O puedes usar un punto simple
+      position: absolute;
+      left: 0;
+      color: variables.$secondary-color;
+      font-weight: bold;
+    }
+  }
+
+  // Estilo específico para Logros (opcional: brillo extra)
+  &.achievements li::before {
+    color: variables.$accent-color; // Color cyan para logros
+    content: "★"; // Estrella o check para logros
+    font-size: 0.8rem;
+    top: 3px;
+  }
+}
+
+// --- Stack Tecnológico (Chips / Badges) ---
+.techGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.techCategory {
+  display: flex;
+  align-items: baseline; // Alinea texto con chips
+  gap: 1rem;
+  flex-wrap: wrap; // Responsive para móviles
+
+  // Etiqueta de la categoría (Frontend, Backend...)
+  > span {
+    font-size: 0.85rem;
+    color: variables.$primary-color;
+    font-weight: 600;
+    min-width: 80px; // Alineación vertical limpia
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 99px; // Pill shape
+  background: rgba(variables.$primary-color, 0.1); // Fondo muy sutil
+  color: lighten(variables.$primary-color, 10%);
+  border: 1px solid rgba(variables.$primary-color, 0.2);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background: rgba(variables.$primary-color, 0.2);
+    transform: translateY(-1px);
+    border-color: variables.$accent-color;
+    color: variables.$text-color;
+  }
+}
+
+// --- Mobile adjustments ---
+@media (max-width: variables.$screen-sm) {
+  .techCategory {
+    flex-direction: column;
+    gap: 0.4rem;
+    
+    > span {
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+  }
 }
