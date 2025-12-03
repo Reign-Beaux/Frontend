@@ -6,7 +6,7 @@ export const Skills = () => {
     <Accordion label="Habilidades técnicas" className={"fade-in delay-3"}>
       <section className={styles.skills}>
         <div className={styles.grouped}>
-          <h3>Buenas prácticas y herramientas</h3>
+          <h3 className={styles.sectionTitle}>Buenas prácticas y herramientas</h3>
           <div className={styles.skillsGrid}>
             <span className={styles.skillTag}>GitHub</span>
             <span className={styles.skillTag}>GitLab</span>
@@ -17,8 +17,9 @@ export const Skills = () => {
             <span className={styles.skillTag}>Principios SOLID</span>
           </div>
         </div>
+
         <div className={styles.grouped}>
-          <h3>Frontend</h3>
+          <h3 className={styles.sectionTitle}>Frontend</h3>
           <div className={styles.skillsGrid}>
             <span className={styles.skillTag}>Vite</span>
             <span className={styles.skillTag}>React</span>
@@ -28,7 +29,8 @@ export const Skills = () => {
             <span className={styles.skillTag}>JavaScript</span>
             <span className={styles.skillTag}>CSS Modules</span>
           </div>
-          <h4>Bibliotecas</h4>
+
+          <h4 className={styles.subTitle}>Bibliotecas</h4>
           <div className={styles.skillsGrid}>
             <span className={styles.skillTag}>Sass</span>
             <span className={styles.skillTag}>React Router Dom</span>
@@ -40,7 +42,7 @@ export const Skills = () => {
         </div>
 
         <div className={styles.grouped}>
-          <h3>Backend</h3>
+          <h3 className={styles.sectionTitle}>Backend</h3>
           <div className={styles.skillsGrid}>
             <span className={styles.skillTag}>.NET 7/8/9/10</span>
             <span className={styles.skillTag}>.NET Framework 4.5</span>
@@ -52,7 +54,8 @@ export const Skills = () => {
             <span className={styles.skillTag}>Refresh Token</span>
             <span className={styles.skillTag}>Rate Limiting</span>
           </div>
-          <h4>Bibliotecas</h4>
+
+          <h4 className={styles.subTitle}>Bibliotecas</h4>
           <div className={styles.skillsGrid}>
             <span className={styles.skillTag}>Entity Framework</span>
             <span className={styles.skillTag}>Dapper</span>
@@ -63,7 +66,8 @@ export const Skills = () => {
             <span className={styles.skillTag}>MoQ</span>
             <span className={styles.skillTag}>Memcached</span>
           </div>
-          <h4>Patrónes de diseño</h4>
+
+          <h4 className={styles.subTitle}>Patrones de diseño</h4>
           <div className={styles.skillsGrid}>
             <span className={styles.skillTag}>Inyección de dependencias</span>
             <span className={styles.skillTag}>Mediator Pattern</span>
@@ -77,12 +81,14 @@ export const Skills = () => {
             <span className={styles.skillTag}>Problem Details</span>
           </div>
         </div>
+
         <div className={styles.grouped}>
-          <h3>Base de datos</h3>
+          <h3 className={styles.sectionTitle}>Base de datos</h3>
           <div className={styles.skillsGrid}>
             <span className={styles.skillTag}>SQL Server</span>
           </div>
-          <h4>Conocimientos Generales</h4>
+
+          <h4 className={styles.subTitle}>Conocimientos Generales</h4>
           <div className={styles.skillsGrid}>
             <span className={styles.skillTag}>Procedimientos Almacenados</span>
             <span className={styles.skillTag}>Vistas</span>

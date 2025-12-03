@@ -1,36 +1,57 @@
 .skills {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 2rem;
+  padding: 1rem 0;
 
   .grouped {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 1rem;
   }
+}
+
+.sectionTitle {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: rgba(variables.$text-color, 0.5);
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subTitle {
+  font-size: 0.75rem;
+  color: variables.$primary-color;
+  font-weight: 600;
+  margin: 0;
+  opacity: 0.9;
 }
 
 .skillsGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 0.5rem;
 }
 
 .skillTag {
-  background-color: variables.$card-bg;
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  box-shadow: variables.$shadow-sm;
-  border: 1px solid variables.$primary-color;
-  color: variables.$text-color;
-  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 99px;
+  background: rgba(variables.$primary-color, 0.1);
+  color: lighten(variables.$primary-color, 10%);
+  border: 1px solid rgba(variables.$primary-color, 0.2);
+  transition: all 0.2s ease;
+  white-space: nowrap;
   cursor: default;
 
   &:hover {
-    background-color: variables.$primary-color;
-    color: white;
-    transform: scale(1.05);
+    background: rgba(variables.$primary-color, 0.2);
+    transform: translateY(-1px);
+    border-color: variables.$accent-color;
+    color: variables.$text-color;
   }
 }
