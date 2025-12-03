@@ -5,6 +5,7 @@ import { Routes } from "./Routes";
 const Home = lazy(() => import("@Presentation/Pages/Home/Home"));
 const MainLayout = lazy(() => import("@Presentation/Components/Layouts/MainLayout/MainLayout"));
 const AboutMe = lazy(() => import("@Presentation/Pages/AboutMe/AboutMe"));
+const Blog = lazy(() => import("@Presentation/Pages/Blog/Blog"));
 
 const routes = [
   {
@@ -31,6 +32,14 @@ const routes = [
           </Suspense>
         ),
       },
+      {
+        path: Routes.Blog,
+        element: (
+          <Suspense fallback={<div>Cargando...</div>}>
+            <Blog />
+          </Suspense>
+        ),
+      }
     ],
   },
   {
