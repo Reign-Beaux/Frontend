@@ -4,25 +4,22 @@ import styles from "./PersonalProjects.module.scss";
 export const PersonalProjects = () => {
   return (
     <Accordion label="Proyectos personales" className={"fade-in delay-3"}>
-      {/* Proyecto 1 */}
       <div className={styles.projectItem}>
         <div className={styles.header}>
-          <h3 className={styles.projectName}>Task Master Pro</h3>
+          <h3 className={styles.projectName}>Portafolio personal</h3>
           <div className={styles.links}>
-            <a 
-              href="https://github.com/tu-usuario/repo" 
-              target="_blank" 
+            <a
+              href="https://github.com/Reign-Beaux/Frontend"
+              target="_blank"
               rel="noopener noreferrer"
-              className={styles.linkButton}
-            >
+              className={styles.linkButton}>
               GitHub
             </a>
-            <a 
-              href="https://mi-proyecto.com" 
-              target="_blank" 
+            <a
+              href="http://localhost:5173/"
+              target="_blank"
               rel="noopener noreferrer"
-              className={`${styles.linkButton} ${styles.deploy}`}
-            >
+              className={`${styles.linkButton} ${styles.deploy}`}>
               Ver Demo
             </a>
           </div>
@@ -30,25 +27,23 @@ export const PersonalProjects = () => {
 
         <div className={styles.body}>
           <p className={styles.description}>
-            Una aplicación de gestión de tareas diseñada para equipos remotos. 
-            Permite la asignación en tiempo real, seguimiento de estados mediante 
-            tableros Kanban y notificaciones automatizadas.
+            Una aplicación de gestión de tareas diseñada para equipos remotos. Permite la asignación en tiempo
+            real, seguimiento de estados mediante tableros Kanban y notificaciones automatizadas.
           </p>
 
           <div className={styles.techStack}>
             <span className={styles.label}>Tecnologías:</span>
             <div className={styles.tags}>
               <span className={styles.tag}>React</span>
-              <span className={styles.tag}>Firebase</span>
-              <span className={styles.tag}>Tailwind</span>
-              <span className={styles.tag}>Zustand</span>
+              <span className={styles.tag}>TypeScript</span>
+              <span className={styles.tag}>Sass</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Proyecto 2 */}
-      <div className={styles.projectItem}>
+      {/* <div className={styles.projectItem}>
         <div className={styles.header}>
           <h3 className={styles.projectName}>E-Commerce API</h3>
           <div className={styles.links}>
@@ -60,7 +55,6 @@ export const PersonalProjects = () => {
             >
               GitHub
             </a>
-            {/* Si no hay deploy, simplemente no renderizas el segundo botón */}
           </div>
         </div>
 
@@ -81,7 +75,7 @@ export const PersonalProjects = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </Accordion>
   );
 };
