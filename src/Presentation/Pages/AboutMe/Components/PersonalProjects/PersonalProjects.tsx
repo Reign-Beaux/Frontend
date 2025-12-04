@@ -36,6 +36,13 @@ export const PersonalProjects = () => {
             <div className={styles.tags}>
               <span className={styles.tag}>React</span>
               <span className={styles.tag}>TypeScript</span>
+            </div>
+          </div>
+
+          <div className={styles.techStack}>
+            <span className={styles.label}>Bibliotecas:</span>
+            <div className={styles.tags}>
+              <span className={styles.tag}>React Router Dom</span>
               <span className={styles.tag}>Sass</span>
             </div>
           </div>
