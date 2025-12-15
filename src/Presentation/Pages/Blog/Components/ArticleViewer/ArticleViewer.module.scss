@@ -1,0 +1,56 @@
+@use 'sass:color';
+
+.viewerContainer {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.backButton {
+    background: transparent;
+    border: 1px solid rgba(variables.$text-color, 0.2);
+    color: variables.$text-color;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover {
+        background: rgba(variables.$text-color, 0.1);
+        border-color: variables.$text-color;
+    }
+}
+
+.contentWrapper {
+    // background: rgba(20, 20, 20, 0.5); // Removed per user request
+    // border-radius: 12px;
+    padding: 1rem 0;
+
+    @media (min-width: variables.$screen-md) {
+        // padding: 2rem;
+    }
+}
+
+.notFound {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: variables.$text-color;
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+}

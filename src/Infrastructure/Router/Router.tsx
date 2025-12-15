@@ -6,6 +6,7 @@ const Home = lazy(() => import("@Presentation/Pages/Home/Home"));
 const MainLayout = lazy(() => import("@Presentation/Components/Layouts/MainLayout/MainLayout"));
 const AboutMe = lazy(() => import("@Presentation/Pages/AboutMe/AboutMe"));
 const Blog = lazy(() => import("@Presentation/Pages/Blog/Blog"));
+const ArticleViewer = lazy(() => import("@Presentation/Pages/Blog/Components/ArticleViewer/ArticleViewer"));
 
 const routes = [
   {
@@ -37,6 +38,14 @@ const routes = [
         element: (
           <Suspense fallback={<div>Cargando...</div>}>
             <Blog />
+          </Suspense>
+        ),
+      },
+      {
+        path: `${Routes.Blog}/:slug`,
+        element: (
+          <Suspense fallback={<div>Cargando...</div>}>
+            <ArticleViewer />
           </Suspense>
         ),
       }
