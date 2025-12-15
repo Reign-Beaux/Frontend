@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .projectItem {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
@@ -46,7 +48,7 @@
   border-radius: 6px;
   font-weight: 600;
   transition: all 0.2s ease;
-  
+
   // Estilo por defecto (GitHub / Código)
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -62,7 +64,7 @@
   &.deploy {
     background: rgba(variables.$primary-color, 0.15);
     border-color: rgba(variables.$primary-color, 0.4);
-    color: lighten(variables.$primary-color, 10%);
+    color: color.adjust(variables.$primary-color, $lightness: 10%);
 
     &:hover {
       background: variables.$primary-color;
@@ -117,11 +119,11 @@
   border-radius: 99px;
   // Usamos el color secundario/accent para diferenciar de WorkExperience si quieres
   // O mantenemos el mismo para consistencia:
-  background: rgba(variables.$accent-color, 0.1); 
+  background: rgba(variables.$accent-color, 0.1);
   color: variables.$accent-color;
   border: 1px solid rgba(variables.$accent-color, 0.2);
   white-space: nowrap;
-  
+
   &:hover {
     background: rgba(variables.$accent-color, 0.2);
     cursor: default;
@@ -134,7 +136,7 @@
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .techStack {
     flex-direction: column;
     align-items: flex-start;

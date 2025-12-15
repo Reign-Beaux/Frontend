@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .skills {
   display: flex;
   flex-direction: column;
@@ -42,7 +44,7 @@
   padding: 4px 12px;
   border-radius: 99px;
   background: rgba(variables.$primary-color, 0.1);
-  color: lighten(variables.$primary-color, 10%);
+  color: color.adjust(variables.$primary-color, $lightness: 10%);
   border: 1px solid rgba(variables.$primary-color, 0.2);
   transition: all 0.2s ease;
   white-space: nowrap;
