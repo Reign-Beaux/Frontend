@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "pnpm run lint && pnpm run lint:css && tsc -b && vite build",
+    "buildWithLints": "pnpm run lint && pnpm run lint:css && tsc -b && vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "lint:css": "stylelint 'src/**/*.{css,scss}'",
     "preview": "vite preview"
