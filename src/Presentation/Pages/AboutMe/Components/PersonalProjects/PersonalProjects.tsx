@@ -16,7 +16,7 @@ export const PersonalProjects = () => {
               GitHub
             </a>
             <a
-              href="http://localhost:5173/"
+              href="https://saulantonio.com/"
               target="_blank"
               rel="noopener noreferrer"
               className={`${styles.linkButton} ${styles.deploy}`}>
