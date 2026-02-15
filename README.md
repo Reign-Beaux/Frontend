@@ -11,6 +11,7 @@ Soy **Saúl Antonio Morquecho Cela**, un desarrollador **Fullstack** apasionado 
 - 🏗️ **Backend:** Especialista en C# y .NET (7.0+).
 - 🎨 **Frontend:** Experiencia con React, Astro y TypeScript.
 - 🗄️ **Bases de Datos:** Experto en SQL Server y diseño de esquemas complejos.
+- 🚀 **SEO & Rendimiento:** Optimizado con Sitemaps, Robots.txt y metadatos Open Graph para redes sociales.
 - ✍️ **Blog:** Comparto conocimientos sobre desarrollo en mi blog integrado.
 
 ---
@@ -33,18 +34,17 @@ Soy **Saúl Antonio Morquecho Cela**, un desarrollador **Fullstack** apasionado 
 
 ```text
 /
-├── public/             # Archivos estáticos (favicon, imágenes)
+├── public/             # Archivos estáticos y configuración SEO (robots.txt)
 ├── src/
 │   ├── assets/         # Recursos optimizados (logos, iconos)
 │   ├── components/     # Componentes de UI (Astro/React)
-│   │   ├── about/      # Secciones de la página "Sobre mí"
-│   │   ├── home/       # Secciones de la página de inicio
-│   ├── content/        # Contenido del blog (Markdown)
-│   ├── data/           # Datos estáticos y configuraciones
-│   ├── layouts/        # Plantillas de página (MainLayout)
-│   ├── pages/          # Enrutamiento basado en archivos
-│   └── styles/         # Estilos globales y variables SCSS
-├── astro.config.mjs    # Configuración de Astro
+│   ├── content/        # Contenido del blog (Markdown con esquemas Zod)
+│   ├── data/           # Datos estáticos y tipos TS
+│   ├── layouts/        # Plantillas (SEO, metadatos OG/Twitter)
+│   ├── pages/          # Enrutamiento y páginas principales
+│   └── styles/         # Variables y mixins SCSS
+├── astro.config.mjs    # Configuración de Astro y Sitemaps
+├── GEMINI.md           # Contexto e instrucciones para asistentes de IA
 └── package.json        # Dependencias y scripts
 ```
 
