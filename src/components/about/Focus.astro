@@ -1,0 +1,84 @@
+---
+---
+<section class="focusContainer fade-in delay-2">
+  <h2>Mi Enfoque y Evolución</h2>
+  <div class="card">
+    <p>
+      Mi filosofía de trabajo se basa en el <strong>aprendizaje continuo</strong>. Creo firmemente que en el desarrollo de software nunca se deja de crecer, por lo que dedico gran parte de mi tiempo a mejorar mis conocimientos actuales y explorar nuevas fronteras tecnológicas.
+    </p>
+    <p>
+      Soy un profesional comprometido con los resultados y la calidad del código. Actualmente, potencio mi productividad integrando herramientas de inteligencia artificial de vanguardia como <strong>Claude Code</strong> y <strong>Gemini CLI</strong> en mi flujo de trabajo diario.
+    </p>
+    <div class="stack-summary">
+      <div class="stack-item">
+        <span class="label">Backend</span>
+        <span class="value">.NET 7.0 / 8.0 / 9.0</span>
+      </div>
+      <div class="stack-item">
+        <span class="label">Frontend</span>
+        <span class="value">React 18+ / Astro</span>
+      </div>
+      <div class="stack-item">
+        <span class="label">Base de Datos</span>
+        <span class="value">MS SQL Server (2014 - 2022)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  @use "../../styles/variables";
+
+  .focusContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 3rem;
+  }
+
+  .card {
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: variables.$border-radius;
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow-sm);
+
+    p {
+      margin-bottom: 1.5rem;
+      &:last-of-type {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .stack-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color-subtle);
+  }
+
+  .stack-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--secondary-color);
+      font-weight: 700;
+    }
+
+    .value {
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+  }
+
+  strong {
+    color: var(--accent-color);
+  }
+</style>

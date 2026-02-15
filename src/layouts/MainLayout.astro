@@ -1,0 +1,53 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.scss";
+
+interface Props {
+	title: string;
+  description?: string;
+}
+
+const { title, description = "Portfolio de Saúl Antonio Morquecho Cela - Desarrollador Frontend Senior" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+		<title>{title}</title>
+    <script is:inline>
+      const getTheme = () => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        return 'dark'; // Default to dark
+      };
+
+      const theme = getTheme();
+      document.documentElement.setAttribute('data-theme', theme);
+
+      window.localStorage.setItem('theme', theme);
+
+      // Toggle function
+      function toggleTheme() {
+        const element = document.documentElement;
+        const isDark = element.getAttribute("data-theme") === "dark";
+        const newTheme = isDark ? "light" : "dark";
+        element.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+      }
+    </script>
+	</head>
+	<body>
+    <Header />
+    <main class="container">
+      <slot />
+    </main>
+    <Footer />
+	</body>
+</html>

@@ -1,0 +1,62 @@
+---
+---
+<section class="getInTouch fade-in delay-3">
+  <h2 class="contactTitle">¿Listo para trabajar juntos?</h2>
+  <p class="contactDescription">
+    Estoy disponible para nuevos proyectos y colaboraciones. Si buscas un desarrollador comprometido con
+    la calidad y la innovación, hablemos.
+  </p>
+  <a href="mailto:saul.morquecho.cela@gmail.com" class="linkButton linkButton-large">
+    Contáctame
+  </a>
+</section>
+
+<style lang="scss">
+  @use "../../styles/variables";
+
+  .getInTouch {
+    margin-bottom: 80px;
+    padding: 60px;
+    background: linear-gradient(135deg, variables.$card-bg, rgba(37, 99, 235, 0.05));
+    border-radius: variables.$border-radius;
+    text-align: center;
+    border: 1px solid variables.$border-color;
+    box-shadow: variables.$shadow-md;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: variables.$primary-color; // Solid primary color
+    }
+  }
+
+  .contactTitle {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: variables.$primary-color; // Solid primary color
+    font-weight: 700;
+  }
+
+  .contactDescription {
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    color: variables.$text-color;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .getInTouch {
+      padding: 40px 20px;
+    }
+    .contactTitle {
+      font-size: 2rem;
+    }
+  }
+</style>

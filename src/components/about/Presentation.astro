@@ -1,0 +1,51 @@
+---
+---
+<section class="presentation fade-in">
+  <div class="photoContainer">
+    <img src="/profile.jpg" alt="Saúl Antonio Morquecho Cela" />
+  </div>
+  <div>
+    <h1>Sobre Mí</h1>
+    <p class="delay-1">
+      Soy <strong>Saúl Antonio Morquecho Cela</strong>, un desarrollador Fullstack comprometido con la excelencia técnica y la innovación constante. 
+      Lo que comenzó como una curiosidad se ha convertido en una pasión: <strong>me encanta ser desarrollador</strong> y afrontar los retos que conlleva construir software de calidad.
+    </p>
+  </div>
+</section>
+
+<style lang="scss">
+  .presentation {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .photoContainer {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+    }
+
+    strong {
+      color: var(--primary-color);
+    }
+  }
+</style>

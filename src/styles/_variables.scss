@@ -1,0 +1,77 @@
+// Typography (Constants)
+$font-sans: 'Archivo', system-ui, sans-serif;
+$font-display: 'Space Grotesk', system-ui, sans-serif;
+
+// Spacing (Constants)
+$padding-content: 0 5%;
+$max-width-content: 1280px;
+$header-height: 72px;
+
+// Breakpoints responsivos
+$screen-sm: 640px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1280px;
+$screen-2xl: 1536px;
+
+// Raw Colors for Sass functions
+$blue-500: #3b82f6;
+$blue-600: #2563eb;
+$indigo-300: #a5b4fc;
+$indigo-600: #4f46e5;
+
+// Theme Variables (CSS Custom Properties)
+:root {
+  // Dark Theme (Default)
+  --bg-color: #09090b;      // Zinc-950
+  --text-color: #fafafa;    // Zinc-50
+  --primary-color: #{$indigo-300}; // Indigo-300
+  --secondary-color: #a1a1aa; // Zinc-400
+  --accent-color: #{$blue-500};
+  --accent-hover: #{#3172d8};
+  --card-bg: #18181b;       // Zinc-900
+  --nav-bg: rgba(9, 9, 11, 0.8);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-color-subtle: rgba(255, 255, 255, 0.05);
+  --bg-accent: rgba(255, 255, 255, 0.03);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --btn-shadow: rgba(59, 130, 246, 0.3);
+}
+
+:root[data-theme="light"] {
+  // Light Theme
+  --bg-color: #fafafa;      // Zinc-50
+  --text-color: #09090b;    // Zinc-950
+  --primary-color: #{$indigo-600}; // Indigo-600
+  --secondary-color: #3f3f46; // Zinc-700
+  --accent-color: #{$blue-600};
+  --accent-hover: #{#1d4ed8};
+  --card-bg: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-color-subtle: rgba(0, 0, 0, 0.05);
+  --bg-accent: rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --btn-shadow: rgba(37, 99, 235, 0.2);
+}
+
+// SCSS variables for easy migration (pointing to CSS variables)
+$bg-color: var(--bg-color);
+$text-color: var(--text-color);
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$accent-color: var(--accent-color);
+$accent-hover: var(--accent-hover);
+$card-bg: var(--card-bg);
+$nav-bg: var(--nav-bg);
+$border-color: var(--border-color);
+$border-color-subtle: var(--border-color-subtle);
+$bg-accent: var(--bg-accent);
+$shadow-sm: var(--shadow-sm);
+$shadow-md: var(--shadow-md);
+$shadow-lg: var(--shadow-lg);
+$border-radius: 8px;

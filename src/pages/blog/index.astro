@@ -1,0 +1,82 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const articles = await getCollection('blog');
+articles.sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime());
+---
+
+<MainLayout title="Saúl Antonio | Blog">
+  <section class="blogContainer">
+    <h1 class="fade-in">Blog</h1>
+    <p class="fade-in delay-1">Pensamientos, tutoriales y guías sobre desarrollo de software.</p>
+    <div class="articlesList fade-in delay-2">
+      {articles.map(article => (
+        <article class="articleCard">
+          <span class="articleDate">{article.data.createdAt.toLocaleDateString("es-ES")}</span>
+          <h2 class="articleCardTitle">
+            <a href={`/blog/${article.slug}`}>{article.data.title}</a>
+          </h2>
+          <p>{article.data.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</MainLayout>
+
+<style lang="scss">
+  @use "../../styles/variables";
+
+  .blogContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 4rem;
+  }
+
+  .articlesList {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .articleCard {
+    background-color: variables.$card-bg;
+    border-radius: variables.$border-radius;
+    padding: 30px;
+    box-shadow: variables.$shadow-sm;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid variables.$border-color;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: variables.$shadow-md;
+    }
+  }
+
+  .articleCardTitle {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+
+    a {
+      text-decoration: none;
+      color: variables.$text-color;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: variables.$accent-color;
+      }
+    }
+  }
+
+  .articleDate {
+    font-size: 0.9rem;
+    color: variables.$accent-color;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+</style>

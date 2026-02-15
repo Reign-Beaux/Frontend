@@ -1,0 +1,187 @@
+---
+import Accordion from "../Accordion.astro";
+---
+
+<Accordion label="Proyectos personales" className="fade-in delay-3">
+  <div class="projectItem">
+    <div class="header">
+      <h3 class="projectName">Portafolio personal</h3>
+      <div class="links">
+        <a
+          href="https://github.com/Reign-Beaux/Astro"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="linkButton">
+          GitHub
+        </a>
+        <a
+          href="/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="linkButton deploy">
+          Ver Demo
+        </a>
+      </div>
+    </div>
+
+    <div class="body">
+      <p class="description">
+        Un sitio web profesional construido con Astro para ofrecer una experiencia de usuario rápida y eficiente. 
+        Cuenta con un sistema de gestión de contenidos para el blog, soporte nativo para temas claro y oscuro, 
+        y una arquitectura modular que facilita su escalabilidad y mantenimiento.
+      </p>
+
+      <div class="techStack">
+        <span class="label">Tecnologías:</span>
+        <div class="tags">
+          <span class="tag">Astro</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">SCSS</span>
+        </div>
+      </div>
+
+      <div class="techStack">
+        <span class="label">Características:</span>
+        <div class="tags">
+          <span class="tag">Content Collections</span>
+          <span class="tag">Dark Mode</span>
+          <span class="tag">SEO Optimized</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</Accordion>
+
+<style lang="scss">
+  @use "../../styles/variables";
+  @use "sass:color";
+
+  .projectItem {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid variables.$border-color;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .projectName {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: variables.$primary-color; // Solid primary color
+    margin: 0;
+  }
+
+  .links {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .linkButton {
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: variables.$border-radius;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    background: transparent;
+    border: 1px solid variables.$border-color;
+    color: variables.$text-color;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
+      transform: translateY(-1px);
+    }
+
+    &.deploy {
+      background: rgba(variables.$accent-color, 0.1);
+      border-color: rgba(variables.$accent-color, 0.3);
+      color: variables.$accent-color;
+
+      &:hover {
+        background: variables.$accent-color;
+        border-color: variables.$accent-color;
+        color: #fff;
+        box-shadow: 0 4px 6px -1px rgba(variables.$accent-color, 0.4);
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(variables.$text-color, 0.85);
+    margin: 0;
+  }
+
+  .techStack {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: rgba(variables.$text-color, 0.5);
+    min-width: fit-content;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: variables.$border-radius;
+    background: rgba(variables.$accent-color, 0.1);
+    color: variables.$accent-color;
+    border: 1px solid rgba(variables.$accent-color, 0.2);
+    white-space: nowrap;
+
+    &:hover {
+      background: rgba(variables.$accent-color, 0.2);
+      cursor: default;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .header {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .techStack {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+</style>

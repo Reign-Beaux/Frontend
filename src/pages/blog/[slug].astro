@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from "../../layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<MainLayout title={`${entry.data.title} | Blog`} description={entry.data.summary}>
+  <article class="blogPost fade-in">
+    <Content />
+  </article>
+</MainLayout>
+
+<style lang="scss" is:global>
+  @use "../../styles/variables";
+
+  .blogPost {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: variables.$primary-color;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    ol, ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    pre {
+      background-color: #1e293b !important;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      overflow-x: auto;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    code {
+      font-family: monospace;
+    }
+
+    strong {
+      color: variables.$primary-color;
+    }
+  }
+</style>

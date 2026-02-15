@@ -1,0 +1,22 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import SmallPresentation from "../components/home/SmallPresentation.astro";
+import BlogPresentation from "../components/home/BlogPresentation.astro";
+import GetInTouch from "../components/home/GetInTouch.astro";
+---
+
+<MainLayout title="Saúl Antonio | Home">
+	<div class="home">
+		<SmallPresentation />
+		<BlogPresentation />
+		<GetInTouch />
+	</div>
+</MainLayout>
+
+<style lang="scss">
+	.home {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+	}
+</style>

@@ -1,0 +1,112 @@
+---
+interface Props {
+  label: string;
+  className?: string;
+}
+
+const { label, className = "" } = Astro.props;
+---
+
+<div class={`accordion ${className}`}>
+  <button class="accordionLabel">
+    {label}
+    <span class="accordionIcon">▼</span>
+  </button>
+  <div class="accordionContent">
+    <div class="contentInner">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  @use "../styles/variables";
+
+  .accordion {
+    background-color: variables.$card-bg;
+    border-radius: variables.$border-radius;
+    box-shadow: variables.$shadow-sm;
+    border: 1px solid variables.$border-color;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+
+    &:hover {
+      box-shadow: variables.$shadow-md;
+    }
+
+    &.active {
+      .accordionIcon {
+        transform: rotate(180deg);
+      }
+      .accordionContent {
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  .accordionLabel {
+    width: 100%;
+    padding: 20px 30px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: variables.$text-color;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: variables.$accent-color;
+    }
+  }
+
+  .accordionIcon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 30px;
+  }
+
+  .contentInner {
+    padding: 0 30px 30px 30px;
+  }
+</style>
+
+<script>
+  const accordions = document.querySelectorAll('.accordion');
+
+  accordions.forEach(accordion => {
+    const label = accordion.querySelector('.accordionLabel');
+    const content = accordion.querySelector('.accordionContent') as HTMLElement;
+
+    label?.addEventListener('click', () => {
+      const isActive = accordion.classList.contains('active');
+
+      // Close all other accordions (optional, but good for UX)
+      // document.querySelectorAll('.accordion.active').forEach(activeAcc => {
+      //   if (activeAcc !== accordion) {
+      //     activeAcc.classList.remove('active');
+          // (activeAcc.querySelector('.accordionContent') as HTMLElement).style.maxHeight = '0';
+      //   }
+      // });
+
+      if (isActive) {
+        accordion.classList.remove('active');
+        content.style.maxHeight = '0';
+      } else {
+        accordion.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
