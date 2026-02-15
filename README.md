@@ -1,43 +1,83 @@
-# Astro Starter Kit: Minimal
+# 🚀 Saúl Antonio | Personal Portfolio
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+¡Bienvenido a mi rincón digital! Este es el código fuente de mi portafolio personal y blog, construido con tecnologías modernas y un enfoque en el rendimiento y la experiencia de usuario.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## 👨‍💻 Sobre mí
 
-Inside of your Astro project, you'll see the following folders and files:
+Soy **Saúl Antonio Morquecho Cela**, un desarrollador **Fullstack** apasionado por la excelencia técnica. Me especializo en el ecosistema **.NET**, **React** y bases de datos relacionales, siempre buscando construir software escalable, limpio y eficiente.
+
+- 🏗️ **Backend:** Especialista en C# y .NET (7.0+).
+- 🎨 **Frontend:** Experiencia con React, Astro y TypeScript.
+- 🗄️ **Bases de Datos:** Experto en SQL Server y diseño de esquemas complejos.
+- ✍️ **Blog:** Comparto conocimientos sobre desarrollo en mi blog integrado.
+
+---
+
+## 🛠️ Stack Tecnológico
+
+### Core
+![Astro](https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+
+### Menciones Especiales (Habilidades)
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat&logo=dotnet&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat&logo=microsoft-sql-server&logoColor=white)
+
+---
+
+## 📁 Estructura del Proyecto
 
 ```text
 /
-├── public/
+├── public/             # Archivos estáticos (favicon, imágenes)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── assets/         # Recursos optimizados (logos, iconos)
+│   ├── components/     # Componentes de UI (Astro/React)
+│   │   ├── about/      # Secciones de la página "Sobre mí"
+│   │   ├── home/       # Secciones de la página de inicio
+│   ├── content/        # Contenido del blog (Markdown)
+│   ├── data/           # Datos estáticos y configuraciones
+│   ├── layouts/        # Plantillas de página (MainLayout)
+│   ├── pages/          # Enrutamiento basado en archivos
+│   └── styles/         # Estilos globales y variables SCSS
+├── astro.config.mjs    # Configuración de Astro
+└── package.json        # Dependencias y scripts
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🚀 Comandos
 
-Any static assets, like images, can be placed in the `public/` directory.
+Este proyecto utiliza **pnpm** como gestor de paquetes.
 
-## 🧞 Commands
+| Comando | Acción |
+| :--- | :--- |
+| `pnpm install` | Instala las dependencias necesarias |
+| `pnpm dev` | Inicia el servidor de desarrollo en `localhost:4321` |
+| `pnpm build` | Genera la versión de producción en `./dist/` |
+| `pnpm preview` | Previsualiza localmente la versión de producción |
+| `pnpm astro check` | Verifica errores de tipos y diagnóstico de Astro |
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+## 📝 Blog
 
-## 👀 Want to learn more?
+El portafolio incluye un sistema de blog integrado que utiliza las **Content Collections** de Astro para manejar archivos Markdown con tipado estricto. Actualmente, puedes encontrar artículos sobre:
+- Secretos de Usuario en .NET.
+- Servicios de Windows con Worker Services.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+## 📧 Contacto
+
+¿Tienes algún proyecto en mente o simplemente quieres charlar sobre tecnología?
+
+- **LinkedIn:** [Saúl Antonio Morquecho Cela](https://www.linkedin.com/in/saul-antonio-morquecho-cela-a367501a4)
+- **Email:** saulmorquecho.dev@gmail.com
+
+---
+Hecho con ❤️ y **Astro**.
