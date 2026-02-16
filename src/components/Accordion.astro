@@ -47,7 +47,7 @@ const { label, className = "" } = Astro.props;
 
   .accordionLabel {
     width: 100%;
-    padding: 20px 30px;
+    padding: clamp(1rem, 3vw, 1.25rem) clamp(1rem, 5vw, 2rem);
     background: none;
     border: none;
     display: flex;
@@ -55,7 +55,7 @@ const { label, className = "" } = Astro.props;
     align-items: center;
     cursor: pointer;
     text-align: left;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
     font-weight: 600;
     color: variables.$text-color;
     transition: color 0.3s ease;
@@ -74,11 +74,11 @@ const { label, className = "" } = Astro.props;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    padding: 0 30px;
+    padding: 0 clamp(1rem, 5vw, 2rem);
   }
 
   .contentInner {
-    padding: 0 30px 30px 30px;
+    padding: 0 0 clamp(1.5rem, 5vw, 2rem) 0;
   }
 </style>
 
