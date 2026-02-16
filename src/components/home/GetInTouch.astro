@@ -15,8 +15,8 @@
   @use "../../styles/variables";
 
   .getInTouch {
-    margin-bottom: 80px;
-    padding: 60px;
+    margin-bottom: clamp(3rem, 10vh, 5rem);
+    padding: clamp(2rem, 8vw, 4rem) clamp(1rem, 5vw, 2rem);
     background: linear-gradient(135deg, variables.$card-bg, rgba(37, 99, 235, 0.05));
     border-radius: variables.$border-radius;
     text-align: center;
@@ -37,14 +37,14 @@
   }
 
   .contactTitle {
-    font-size: 2.5rem;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
     margin-bottom: 1rem;
     color: variables.$primary-color; // Solid primary color
     font-weight: 700;
   }
 
   .contactDescription {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     max-width: 650px;
     margin: 0 auto 2.5rem;
     color: variables.$text-color;
@@ -52,11 +52,8 @@
   }
 
   @media (max-width: 768px) {
-    .getInTouch {
-      padding: 40px 20px;
-    }
     .contactTitle {
-      font-size: 2rem;
+      // Removed fixed size, using clamp above
     }
   }
 </style>

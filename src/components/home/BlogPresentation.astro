@@ -52,8 +52,8 @@ const latestArticles = articles.slice(0, 4);
 
   .cardGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
     margin-bottom: 2rem;
   }
 

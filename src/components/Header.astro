@@ -78,7 +78,7 @@ const navLinks = [
     -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
     border-bottom: 1px solid variables.$border-color;
-    padding: 1.2rem 0;
+    padding: clamp(0.75rem, 2vh, 1.2rem) 0;
     transition: background-color 0.3s ease, border-color 0.3s ease;
   }
 
@@ -86,6 +86,12 @@ const navLinks = [
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @media (max-width: 640px) {
+      justify-content: center;
+    }
   }
 
   .themeToggle {
@@ -93,7 +99,7 @@ const navLinks = [
     border: 1px solid variables.$border-color;
     color: variables.$text-color;
     cursor: pointer;
-    padding: 8px;
+    padding: clamp(6px, 1.5vw, 8px);
     border-radius: variables.$border-radius;
     display: flex;
     align-items: center;
@@ -104,6 +110,11 @@ const navLinks = [
       background-color: variables.$bg-accent;
       color: variables.$accent-color;
       border-color: variables.$accent-color;
+    }
+
+    svg {
+      width: clamp(18px, 4vw, 20px);
+      height: clamp(18px, 4vw, 20px);
     }
 
     .sun { display: none; }
@@ -117,7 +128,7 @@ const navLinks = [
 
   .socialNetworks {
     display: flex;
-    gap: 24px;
+    gap: clamp(1rem, 3vw, 1.5rem);
     list-style: none;
     align-items: center;
     padding: 0;
@@ -129,6 +140,8 @@ const navLinks = [
     }
 
     svg {
+      width: clamp(24px, 5vw, 32px);
+      height: clamp(24px, 5vw, 32px);
       fill: variables.$text-color;
       transition: fill 0.2s ease, transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       cursor: pointer;
@@ -143,7 +156,7 @@ const navLinks = [
 
   .navLinks {
     display: flex;
-    gap: 32px;
+    gap: clamp(1rem, 4vw, 2rem);
     list-style: none;
     align-items: center;
     margin: 0;
@@ -156,6 +169,7 @@ const navLinks = [
     a {
       text-decoration: none;
       color: variables.$text-color;
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
       font-weight: 500;
       transition: color 0.2s ease;
       position: relative;
