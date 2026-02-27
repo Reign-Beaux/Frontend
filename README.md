@@ -72,7 +72,7 @@ El portafolio incluye un sistema de blog integrado que utiliza las **Content Col
 ¿Tienes algún proyecto en mente o simplemente quieres charlar sobre tecnología?
 
 - **LinkedIn:** [Saúl Antonio Morquecho Cela](https://www.linkedin.com/in/saul-antonio-morquecho-cela-/)
-- **Email:** saul.morquecho.cela@gmail.com
+- **Email:** hola@saulantonio.com
 
 ---
 Hecho con ❤️ y **Astro**.
